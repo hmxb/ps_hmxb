@@ -1,11 +1,16 @@
-words = input().upper()
-uniqueWords = list(set(words))
-cntList = []
-for i in uniqueWords:
-    cnt = words.count(i)
-    cntList.append(cnt)
-if cntList.count(max(cntList)) > 1:
+word = input().upper()  # zZa > ZZA
+uniqueWord = list(set(word))  # A, Z
+#print(uniqueWord)
+cnt = 0
+lst = []
+for i in uniqueWord:
+    cnt = word.count(i)
+    lst.append(cnt)
+# print(lst)
+# print(lst.index(max(lst)))
+
+if lst.count(max(lst)) > 1:
     print('?')
 else:
-    maxIndex = cntList.index(max(cntList))
-    print(uniqueWords[maxIndex])
+    maxIndex = lst.index(max(lst))
+    print(uniqueWord[maxIndex])
